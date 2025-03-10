@@ -1,0 +1,105 @@
+Java API
+--------
+Java SE API [COREJAVA]
+-----------
+|__console-based application
+
+Java comments
+Java String API
+|_google search with //java se api
+|_java.lang.String
+            |_String.java [FileName.java --|__ class files
+					   |__ abstract class files
+				           |__ interface files
+					   |__ annotation files
+				           |__ Enum files
+					   |__ Exceptions files
+					   |__ Errors files
+					   |__ record files
+
+pre-defined java file: String.java - It is part of class files 
+
+Java keywords - Reserved identifiers in Java 
+if	class		boolean[1]	float[32]	public				
+else	abstract	byte[8]		double[64]	private
+do	interface	short[16]	char[16]	protected
+while	enum		int[32]		static		default
+for	record		long[64]	final		return
+
+Java blocks
+-------------
+{
+ ---	statements;
+ ---	
+}
+
+class - Fundamental built in block in Java programming language.
+syntax:
+-------
+<modifier> class <ClassName> {
+ variable declaration;
+ method derivation;
+}
+
+[This is represent state]
+variable declaration - 
+syntax: [<modifier>] <data-type> <variable-name> [=initial-value];
+|______________________e.g. int age=10; float basicSalary; String firstName;
+|__Types
+   |__ Primitive variable [followed by primitive keywords]
+   |__ Reference variable [except primitive keywords]
+|__Scope
+   |__ Instance variable
+   |__ local variable
+
+[This is represent behavior]
+method derivation - 
+syntax: [<modifier>] <return-type> <method-name>([<param-list>]) {
+	  ----  
+          ----
+          [<return>] return-value;
+        }
+
+modifier - specify the access level 
+return-type - primitive or reference type of variable or void
+method-name - it's upto the developer
+param-list - primitive or reference type of variables spearated by comman operator
+
+public int addition(int num1, int num2) {
+  int result;
+  result = num1 + num2;
+  return result;
+}
+
+Encapsulation [OOPs principle]
+-------------
+Data hiding - declared all the variables assigned private access modifier
+Accessor/Mutator 
+getter/setter     get+variable-name()  empId --> get+empId = getEmpId() -> share it
+		  set+variable-name()  empId --> set+empId = setEmpId() -> change it
+
+
+class Employee {
+ private int empId;
+ private String empName;
+ private double basicPay;
+ public int getEmpId() {
+  return empId;
+ }
+ public void setEmpId(int empId) {
+   this.empId = empId;
+ }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

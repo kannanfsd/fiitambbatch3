@@ -1,0 +1,21 @@
+package com.inheritance;
+
+class Parent {
+    void printDisplay() {
+        System.out.println("This is parent display method.");
+    }
+}
+class Child extends Parent {
+    @Override
+    void printDisplay() {
+        super.printDisplay();
+        System.out.println("This is child display method.");
+    }
+}
+
+public class SecondDemo {
+    public static void main(String[] args) {
+        Child obj = new Child();
+        obj.printDisplay();
+    }
+}

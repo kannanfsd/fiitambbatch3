@@ -1,0 +1,22 @@
+package com.fundamental;
+
+public class ReturnValue {
+    public String getNameInWords(int number) {
+        if(number == 1) {
+            return "One";
+        } else if(number == 2) {
+            return "Two";
+        } else if(number == 3) {
+            return "Three";
+        } else {
+            return "Unknown";
+        }
+    }
+    public static void main(String[] args) {
+        ReturnValue returnValue = new ReturnValue();
+        System.out.println(returnValue.getNameInWords(1));
+        System.out.println(returnValue.getNameInWords(2));
+        System.out.println(returnValue.getNameInWords(3));
+        System.out.println(returnValue.getNameInWords(4));
+    }
+}

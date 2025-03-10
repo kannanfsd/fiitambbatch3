@@ -1,0 +1,83 @@
+Java SE API
+------------
+java keywords - class |-> It allows to build the java application
+
+class <ClassName> {
+  variables declaration;
+  methods derivation;
+}
+
+variable declaration section
+|__Types [<return-type> | no primitive & reference -> void]
+|  |__primitive variables
+|  |  |__ boolean, byte, short, int, long, float, double, char
+|  |__reference variables
+|  |  |__ except primitive e.g. System in; Employee emp; Student stud;
+|__Scope
+|  |__Instance variable [directly declared the class structure]
+|  |__Local variable [variable declared inside the methods]
+|__modifier
+|  |__ public, private, protected, default, static, final
+
+variable syntax: [primitive/reference]
+----------------
+<modifier> <data-type> <variable-name> [=initialized-value];
+byte ch = 10;
+
+<modifier> - It is provide the access specifier
+|__public
+|__private 
+|__protected
+|__default
+
+methods syntax:
+---------------
+<modifier> <return-type> <method-name>([param-list]) {
+ --- //logic
+ --- //statements
+ [return-value]
+}
+e.g.
+---
+public static void main(String[] args){
+
+}
+
+void display() {
+ String msg = "welcome to all..";
+ System.out.println(msg);
+}
+
+
+// Block structure
+{
+ ---
+ ---
+}
+
+E.g. 
+---
+class Student {
+ public int empId;			//primitive
+ String empName;			//reference
+ void display() {
+   String msg = "welcome to all.."; //reference 
+   System.out.println(msg);
+   System.out.println("Employee ID"+empId+" and his/her name is "+empName()
+ }
+ public static void main(String[] args){
+
+ }
+}
+
+// display() - user-defined methods
+// main() - pre-defined method in Java SE API
+
+Maven (GAV)
+-----
+
+
+
+
+
+
