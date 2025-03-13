@@ -229,6 +229,44 @@ git branch -M main
 git remote add origin https://github.com/kannanfsd/fiitambbatch3.git
 git push -u origin main
 
+Exception Handling in Java program in two ways.
+1. try-catch-finally
+2. throws
+
+Java Exception API
+|__ java.lang [class, interface, Enum, exception, annotation]
+    |__ Thread.sleep(2000)
+        |__ sleep(long mills) - 1s -> 1000ms
+|__ java.io 
+|__ java.util 
+|__ java.net 
+
+java.lang
+Object
+|e__Throwable
+    |e__Exception
+       |e__IOException
+       |e__SQLException
+       |e__InterruptedException
+       |e__RuntimeException
+       |   |e__ArithmeticException
+       |   |e__IndexBoundException
+       |   |   |e__ArrayIndexOutOfBoundException
+       |   |   |e__StringIndexOutOfBoundException
+       |   |e__NullPointerException
+       |   |e__ClassCastException
+       |   |e__IllegalArgumentException
+       |   |   |e__NumberFormatException
+       |e__SOAPException
+       |e__TimeException
+       |e__XPathException
+
+
+
+
+
+Throwable
+
 
 
 
