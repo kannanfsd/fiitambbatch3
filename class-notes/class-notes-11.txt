@@ -1,0 +1,390 @@
+Java SE API
+------------
+java.util
+|__Scanner.java - It allows to get runtime input from user.
+
+java.io
+|__InputStream.java [it is an abstract class]
+
+java.lang
+|__System.java
+
+class System {
+  static InputStream in;	
+  static PrintStream out;
+}
+
+System.in
+System.out.println()
+
+class ClassName {
+  variables;
+  methods;
+}
+
+abstract class ClassName {
+  variables;
+  methods;	    //it is a method definition section	
+  abstract methods; //it is a method declaration section
+}
+
+abstract class LivingThing {
+  int id;
+  String name;
+  void display() {
+    System.out.println("ID: "+id+" Name: "+name);
+  }
+  abstract void walk();
+}
+class Human extends LivingThing {
+
+}
+
+LivingThing obj = new LivingThing();
+
+1. abstract class cannot instantiate directly
+2. abstract class is act as a parent/base/super class
+3. which class is followed by abstract class it's automatically override the abstract method
+
+Java Inheritance
+-----------------
+class Standard{
+ void add(){}
+ void subtract(){}
+ void multiply(){}
+ void division(){}
+}
+class Scientific extends Standard {
+  void sinValue(){}
+  void cosValue(){}
+  void tanValue(){}  
+}
+
+1. Single 2. Multi-level 3. Hierarchical 4. Multiple 5. Hybrid
+
+class A{}
+class B extends A{}
+
+B obj = new B();
+
+class A {}
+class B extends A {}
+class C extends B {}
+
+C obj = new C();
+
+class A {}
+class B extends A {}
+class C extends A {}
+class D extends A {}
+
+B b = new B();
+C c = new C();
+D d = new D();
+
+class A {}
+class B {}
+class C extends A, B {}		// compilation error
+				// extends keyword extend only one base class
+
+this	- it allows to represent the current instance member
+this()	- call the constractor method within a class 
+
+super	- refer to immediate super class member
+super()	- call the immediate super class constructor method
+
+class A {
+ A() {}		// default constructor
+}
+class B extends A {
+ B() {} 	// default constructor
+}
+class Main {
+ main() {
+  B obj = new B();
+ }
+}
+   
+Scanner scan = new Scanner(System.in);
+|__boolean nextBoolean()
+|__String nextLine()
+|__String next()
+
+Java Wrapper classes - java.lang
+--------------------   |__
+boolean			Boolean.java	static boolean parseBoolean(String data)
+byte			Byte.java	static byte parseByte(String data)
+short			Short.java	static short parseShort(String data)
+int			Integer.java	static int parseInt(String data)
+long			Long.java	static long parseLong(String data)
+float			Float.java	static float parseFloat(String data)
+double			Double.java	static double parseDouble(String data)
+char			Character.java
+
+class A{
+ static int a;
+ Integer a1;
+ static int display() {}
+
+}
+class B {
+ void m1() {
+   //A obj = new A();
+   A.display();
+
+
+public static void main(String[] args) {}
+
+Interface
+---------
+class A{}
+abstract class Abs{}
+
+class -> interface -> implements <-- class
+
+<modifier> interface <InterfaceName> {
+  variables;	// By default, public static final - variable
+  methods;	// By default, it is an abstract method
+  //Java 8 onwards
+  default method definition;
+  static method definition;
+}
+
+interface IA{}
+class A implements IA {}
+
+Abstract 		vs 			Interface
+
+public interface Shape {
+  double PI;		//compilation error because it is a final variable it should be initialized the value
+  public double calculateArea();	//
+  public double calculateVolume();
+
+}
+
+
+Java API - Day 9
+----------------
+class to class			- extends - it's extend only one base class
+abstract class to class		- extends
+interface to class		- implements - it's support extend more..
+
+class 
+|
+abstract class 
+|__abstract method;	given that method just for declared;
+
+void display() {
+ 
+}
+
+public interface RBI {
+  variables;  //public final static 
+  int a = 10;
+  methods;    //abstract 
+  void savingsAccount();
+  void currentAccount();
+  //Java 8+
+  default void method1() {}
+  static void method2() {}
+}
+
+private interface SEBI {
+  void demat();
+}
+class SBI implements RBI, SEBI {
+  void savingsAccount() {}
+  void currentAccount() {}
+  void demat() {}
+}
+
+abstract class A {}
+class B extends A{}
+interface IA {}
+interface IB {}
+
+class C1 implements IA {}
+class C2 extends B implements IA {}
+class D extends B implements IA, IB {}
+
+class D implements IA, IB extends B {}  //compilation error
+
+Java API - Day 10
+------------------
+Java Exception Handling Mechanism
+---------------------------------
+Exception
+----------
+Two options they provide as, 
+I 	try-catch-finally
+II   	throws
+
+https://github.com/kannanfsd/fiitambbatch3.git
+git --version
+git status
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/kannanfsd/fiitambbatch3.git
+git push -u origin main
+
+Exception Handling in Java program in two ways.
+1. try-catch-finally
+2. throws
+
+Java Exception API
+|__ java.lang [class, interface, Enum, exception, annotation]
+    |__ Thread.sleep(2000)
+        |__ sleep(long mills) - 1s -> 1000ms
+|__ java.io 
+|__ java.util 
+|__ java.net 
+
+java.lang
+Object
+|e__Throwable
+    |e__Exception
+       |e__IOException
+       |e__SQLException
+       |e__InterruptedException
+       |e__RuntimeException
+       |   |e__ArithmeticException
+       |   |e__IndexBoundException
+       |   |   |e__ArrayIndexOutOfBoundException
+       |   |   |e__StringIndexOutOfBoundException
+       |   |e__NullPointerException
+       |   |e__ClassCastException
+       |   |e__IllegalArgumentException
+       |   |   |e__NumberFormatException
+       |e__SOAPException
+       |e__TimeException
+       |e__XPathException
+
+method syntax:
+--------------
+
+<modifier> return-type method-name(<param-list>)<throws> Exception-list {
+
+}
+
+public void display(int a, int b)throws ArithmeticException {
+
+}
+
+Java String API
+---------------
+java.lang
+|
+String.java
+|
+
+
+String firstName = "Hello";	//literal definition - String pool 
+String lastName = "Hello";
+
+String str1 = new String("Hello");	//new operator - Heap Memory
+String str2 = new String("Hello");
+str2.intern();
+
+float f = 4126.25874;
+
+o/p 4126.25
+
+%.2f
+
+
+Java Collections API
+--------------------
+
+primitive 	reference [wrapper classes available from java.lang
+-------------------------
+boolean		Boolean
+byte		Byte
+short		Short
+int		Integer
+long		Long
+float		Float
+double		Double
+char		Character
+		String
+		Employee
+		Student
+		Customer
+		Product
+		Person
+		User
+
+Interface
+---------
+public interface IPerson {
+  variable with constant value; // public final static 
+  method declaration;		// abstract
+  default method definition;
+  static method definition;
+}
+java.lang
+interface Iterable{}
+java.util
+|__interface Collection extends Iterable
+|  |__interface List extends Collection
+|  |  |__class ArrayList implements List
+|  |  |__class LinkedList implements List
+|  |  |__class Vector implements List
+|  |	 |__class Stack extends Vector
+|  |__interface Queue extends Collection
+|  |  |__class PriorityQueue implements Queue
+|  |  |__interface Deque extends Queue
+|  |     |__class ArrayDeque implements Deque
+|  |__interface Set extends Collection
+|  |  |__interface SortedSet extends Set
+|  |  |  |__interface NavigableSet extends SortedSet
+|  |  |  |  |__class TreeSet implements NavigableSet   
+|  |  |__class Hashset implements Set
+|  |  |__class LinkedHashset implements Set 
+|__interface Iterator
+|  |__hasNext()
+|  |__next()
+|  |__remove()
+|__interface Map
+|  |__class HashMap implements Map
+|  |__class Hashtable implements Map
+|  |__interface SortedMap extends Map
+|  |  |__interface NavigableMap extends SortedMap
+|  |     |__class TreeMap implements NavigableMap 
+|__interface Map.Entry<> 
+|  |__getKey()
+|  |__getValue()
+   
+Hashing:
+Hashing is a technique used to uniquely identify data by converting it into a fixed-size value, often called a hash code or hash value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
