@@ -261,11 +261,60 @@ Object
        |e__TimeException
        |e__XPathException
 
+method syntax:
+--------------
+
+<modifier> return-type method-name(<param-list>)<throws> Exception-list {
+
+}
+
+public void display(int a, int b)throws ArithmeticException {
+
+}
+
+Java String API
+---------------
+java.lang
+|
+String.java
+|
+
+
+String firstName = "Hello";	//literal definition - String pool 
+String lastName = "Hello";
+
+String str1 = new String("Hello");	//new operator - Heap Memory
+String str2 = new String("Hello");
+str2.intern();
+
+float f = 4126.25874;
+
+o/p 4126.25
+
+%.2f
+
+
+Java Collections API
+--------------------
 
 
 
 
-Throwable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
